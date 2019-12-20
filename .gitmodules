@@ -1,0 +1,13 @@
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
+[submodule "public"]
+	path = public
+	url = git@github.com:lilacs2039/lilacs2039.github.io.git
+	branch = master
+[submodule "themes/whiteplain"]
+	path = themes/whiteplain
+	url = https://github.com/taikii/whiteplain.git
+[submodule "themes/whiteplain-light"]
+	path = themes/whiteplain-light
+	url = https://github.com/taikii/whiteplain-light.git
