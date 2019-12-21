@@ -1,3 +1,4 @@
+
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 : Build the project.
@@ -10,11 +11,8 @@ cd public
 git add .
 
 : Commit changes.
-set msg="rebuilding site `date`"
-if not %1=="" (
-  set msg=%1
-)
-git commit -m %msg%
+set comment="%1 \n rebuilding site %date% %time% "
+git commit -m %comment%
 
 : Push source and build repos.
 git push origin master
@@ -24,7 +22,7 @@ cd ..
 
 : Commit source repository changes
 git add .
-git commit -m "$msg"
-git push
+git commit -m %comment%
+git push origin master
 
 pause
